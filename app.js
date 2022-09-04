@@ -1,5 +1,13 @@
 // create server
 const http = require('http');
+
+// for terminate server when some error occor
+const dbConnection = true;
+
+if(!dbConnection) {
+    process.exit(1);
+}
+
 const server = http.createServer((req, res) => {
     switch(req.url) {
         case '/':
@@ -20,7 +28,11 @@ const server = http.createServer((req, res) => {
             break;
         
         case '/user':
-            res.end('Welcome to user page');    
+            res.end('Welcome to user page');   
+            break; 
+
+        default:
+            res.end('not found!');    
     }
     
 });
