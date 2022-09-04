@@ -13,6 +13,6 @@ event loop stack is set of 4x block sets
 
 ![image](https://user-images.githubusercontent.com/75485255/188318934-e069d13e-2f8e-4aca-a2d3-eece7dea0ec2.png)
 
-event loop first execute os stack (first priority)
+event loop first execute os stack (first priority) - OS delegation
 then its goes to Libuv and execute call back functions
 
