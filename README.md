@@ -27,3 +27,9 @@ then its goes to Libuv and execute call back functions
 # install express module
 
 npm i express
+
+# Module types
+
+1.Core modules
+2.npm modules
+3.Local modules
