@@ -39,3 +39,9 @@ npm i express
 1. javaScript/ JSON files
 2. Directory with package.json file
 3. Directory with index.js file
+
+# Handling async function
+
+- callBack
+- Promises
+- async/await
