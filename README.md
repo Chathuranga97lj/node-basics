@@ -30,6 +30,12 @@ npm i express
 
 # Module types
 
-1.Core modules
-2.npm modules
-3.Local modules
+1. Core modules
+2. npm modules
+3. Local modules
+
+# require(); terms for....
+
+1. javaScript/ JSON files
+2. Directory with package.json file
+3. Directory with index.js file
