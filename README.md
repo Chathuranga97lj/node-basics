@@ -17,6 +17,7 @@ event loop first execute os stack (first priority) - OS delegation
 then its goes to Libuv and execute call back functions
 
 # Event loop tricks
+
 ![image](https://user-images.githubusercontent.com/75485255/188319431-9cf6d713-97ae-4329-be9e-f7dad94a3689.png)
 
 ![image](https://user-images.githubusercontent.com/75485255/188319502-b4c7b128-1acb-4dac-8e9f-246b16a2e2cd.png)
