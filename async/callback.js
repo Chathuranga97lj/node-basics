@@ -16,14 +16,20 @@ const getReviews = (movieid, cb) => {
     }, 1000);
 };
 
-const getUsers = () => {
-
+const getUsers = (name, cb) => {
+    setTimeout(() => {
+        const user = users.find(user => user.name === name);
+        cb(user);
+    }, 1000);
 };
 
 // calback pattern 1
 getMovies(3, (movie) => {
     // console.log(movie);
     getReviews(movie.id, (review) => {
-        console.log(review);
+        // console.log(review);
+        getUsers(review.reviewer, (user) => {
+            console.log(user);
+        });
     });
 })
