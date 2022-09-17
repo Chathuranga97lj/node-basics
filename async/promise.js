@@ -59,7 +59,11 @@ getMovies(1)
         return getReviews(movie.id);
     })
     .then(review => {
-        console.log(review);
+        // 
+        return getUsers(review.reviewer);
+    })
+    .then(user => {
+        console.log(user);
     })
     .catch(err => {
         console.log(err)
