@@ -53,18 +53,31 @@ const getUsers = (name) => {
 //     });
 // })
 
-getMovies(1)
-    .then(movie => {
-        // console.log(movie);
-        return getReviews(movie.id);
-    })
-    .then(review => {
-        // 
-        return getUsers(review.reviewer);
-    })
-    .then(user => {
-        console.log(user);
-    })
-    .catch(err => {
-        console.log(err)
-    })
+// getMovies(1)
+//     .then(movie => {
+//         // console.log(movie);
+//         return getReviews(movie.id);
+//     })
+//     .then(review => {
+//         // 
+//         return getUsers(review.reviewer);
+//     })
+//     .then(user => {
+//         console.log(user);
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     })
+
+    // event loop async/await
+    (
+        async() => {
+            // const movie = getMovies(2);
+            const movie = await getMovies(2);
+            // console.log(movie);
+            const review = await getReviews(movie.id);
+            // console.log(review);
+            const user = await getUsers(review.reviewer);
+            console.log(user);
+        }
+    )();
