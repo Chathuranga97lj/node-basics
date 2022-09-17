@@ -72,12 +72,16 @@ const getUsers = (name) => {
     // event loop async/await
     (
         async() => {
-            // const movie = getMovies(2);
-            const movie = await getMovies(2);
-            // console.log(movie);
-            const review = await getReviews(movie.id);
-            // console.log(review);
-            const user = await getUsers(review.reviewer);
-            console.log(user);
+            try{
+                // const movie = getMovies(2);
+                const movie = await getMovies(5);
+                // console.log(movie);
+                const review = await getReviews(movie.id);
+                // console.log(review);
+                const user = await getUsers(review.reviewer);
+                console.log(user);
+            } catch(err) {
+                console.log(err);
+            };
         }
     )();
