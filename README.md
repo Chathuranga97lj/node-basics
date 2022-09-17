@@ -49,3 +49,6 @@ npm i express
 # CallBack
 ![image](https://user-images.githubusercontent.com/75485255/188449438-54bb4e74-a88d-42b4-a62a-c2035642e33e.png)
 
+# Promises
+![image](https://user-images.githubusercontent.com/75485255/190864313-071de78e-06f9-494d-993d-7c6e33562e17.png)
+
