@@ -7,17 +7,23 @@ const getMovies = (id, cb) => {
         const movie = movies.find((movie) => movie.id ===id);
         cb(movie);
     }, 1000);
-}
+};
 
-const getReviews = () => {
-
-}
+const getReviews = (movieid, cb) => {
+    setTimeout(() => {
+        const review = reviews.find((review) => review.movie_id === movieid);
+        cb(review);
+    }, 1000);
+};
 
 const getUsers = () => {
 
-}
+};
 
 // calback pattern 1
 getMovies(3, (movie) => {
-    console.log(movie);
+    // console.log(movie);
+    getReviews(movie.id, (review) => {
+        console.log(review);
+    });
 })
