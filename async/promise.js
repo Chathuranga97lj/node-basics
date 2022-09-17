@@ -15,18 +15,30 @@ const getMovies = (id) => {
     });
 };
 
-const getReviews = (movieid, cb) => {
-    setTimeout(() => {
-        const review = reviews.find((review) => review.movie_id === movieid);
-        cb(review);
-    }, 1000);
+const getReviews = (movieid) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const review = reviews.find((review) => review.movie_id === movieid);
+            if(review){
+                resolve(review);
+            } else {
+                reject('Not found review!');
+            }
+        }, 1000);
+    }) 
 };
 
-const getUsers = (name, cb) => {
-    setTimeout(() => {
-        const user = users.find(user => user.name === name);
-        cb(user);
-    }, 1000);
+const getUsers = (name) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const user = users.find(user => user.name === name);
+            if(user){
+                resolve(user);
+            } else {
+                reject('Not found user !');
+            }
+        }, 1000);
+    })
 };
 
 
@@ -43,7 +55,11 @@ const getUsers = (name, cb) => {
 
 getMovies(1)
     .then(movie => {
-        console.log(movie);
+        // console.log(movie);
+        return getReviews(movie.id);
+    })
+    .then(review => {
+        console.log(review);
     })
     .catch(err => {
         console.log(err)
