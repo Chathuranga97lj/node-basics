@@ -47,8 +47,34 @@ npm i express
 - async/await
 
 # CallBack
+
 ![image](https://user-images.githubusercontent.com/75485255/188449438-54bb4e74-a88d-42b4-a62a-c2035642e33e.png)
 
 # Promises
+
 ![image](https://user-images.githubusercontent.com/75485255/190864313-071de78e-06f9-494d-993d-7c6e33562e17.png)
 
+# Create package JSON
+
+npm init
+
+# Create nodemon with dev package
+
+npm i --save-dev nodemon
+
+# production depentance (data validation package)
+
+npm i @hapi/joi
+
+# show dependancy and sub dependancy
+
+npm list
+npm list --depth=0
+
+# view dependancy details
+
+npm view <dependancy name>
+
+# npm check updates
+
+ncu
