@@ -1,4 +1,4 @@
-const {opendir, stat} = require('fs');
+const {opendir, stat, open, readFile, writeFile} = require('fs');
 const {promisify} = require('util');
 
 const oDir = promisify(opendir);
@@ -13,8 +13,10 @@ const getStat = promisify(stat);
 //     })
 //     .catch()
 
-getStat('./EventEmitter.js')
-    .then((stat) => {
-        console.log(stat);
-    })
-    .catch(err => console.log(err));
+// check files stat
+// getStat('./EventEmitter.js')
+//     .then((stat) => {
+//         console.log(stat);
+//     })
+//     .catch(err => console.log(err));
+
