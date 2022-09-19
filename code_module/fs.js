@@ -21,14 +21,18 @@ const read = promisify(readFile);
 //     })
 //     .catch(err => console.log(err));
 
-open('./EventEmitter.js', (err, fd) => {
-    if(err) {
-        console.log(err);
-        return;
-    }
-    read(fd, 'utf8')
-        .then(data => {
-            console.log(data);
-        })
-        .catch(err => console.log(err));
-});
+// open('./EventEmitter.js', (err, fd) => {
+//     if(err) {
+//         console.log(err);
+//         return;
+//     }
+//     read(fd, 'utf8')
+//         .then(data => {
+//             console.log(data);
+//         })
+//         .catch(err => console.log(err));
+// });
+
+writeFile('./text.txt', "Hello form this file", (err) => {
+    console.log(err);
+})
