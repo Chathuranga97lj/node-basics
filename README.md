@@ -82,3 +82,6 @@ ncu
 # HTTP request
 ![image](https://user-images.githubusercontent.com/75485255/191000584-72b0b1b0-563b-4861-b6cf-01d6f75818ed.png)
 
+# HTTP response
+  ![image](https://user-images.githubusercontent.com/75485255/191001215-4f46f4c6-fe23-4d27-b09a-c1d19912ff4c.png)
+
